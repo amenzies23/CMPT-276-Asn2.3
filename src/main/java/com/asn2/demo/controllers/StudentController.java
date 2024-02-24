@@ -23,7 +23,6 @@ import com.asn2.demo.models.StudentRepository;
 import jakarta.servlet.http.HttpServletResponse;
 
 
-
 @Controller
 
 public class StudentController {

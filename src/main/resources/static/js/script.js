@@ -1,9 +1,5 @@
 src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js">
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    window.location.href = '/students/view';
-});
-
 //I struggled a lot with this function and had to find help online with how to go about it, but the code I wrote
 //is still my own. My main idea was to have each student populate a modal with all their info displayed everytime you click
 //on the students rectangle. It was a big learning curve working with async functions and various other functions in here.
