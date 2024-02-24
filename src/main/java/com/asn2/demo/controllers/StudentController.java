@@ -33,7 +33,7 @@ public class StudentController {
     public String redirectToStudentsView() {
         return "redirect:/students/view";
     }
-    
+
     //GET mapping to show the full list of students
     @GetMapping("/students/view")
     public String getAllStudents(Model model) {
@@ -64,7 +64,6 @@ public class StudentController {
     // Fetch the existing student from the database
     Student student = studentRepo.findById(id)
         .orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
-    // Add the student to the model to pre-populate the form
     model.addAttribute("student", student);
     // Open the students/edit page
     return "students/edit";

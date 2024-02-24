@@ -1,5 +1,9 @@
 src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js">
 
+function onLoadFunctions() {
+    // Initialization code here
+}
+
 //I struggled a lot with this function and had to find help online with how to go about it, but the code I wrote
 //is still my own. My main idea was to have each student populate a modal with all their info displayed everytime you click
 //on the students rectangle. It was a big learning curve working with async functions and various other functions in here.
@@ -31,6 +35,9 @@ async function toggleModal(studentId) {
                 window.location.href = `/students/${studentId}/edit`;
             });
         }
+        else {
+            console.error('Student details not found:', response.status);  
+        }  
     //Error handling if we cannot find any of the student details
     } catch (error) {
         console.error('Error fetching student details:', error);
