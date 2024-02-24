@@ -29,6 +29,11 @@ public class StudentController {
     @Autowired
     private StudentRepository studentRepo;
 
+    @GetMapping("/")
+    public String redirectToStudentsView() {
+        return "redirect:/students/view";
+    }
+    
     //GET mapping to show the full list of students
     @GetMapping("/students/view")
     public String getAllStudents(Model model) {
